@@ -22,7 +22,7 @@ export function MoodBoard (){
 
     <MoodBoardItem 
 
-    color="black"
+    color=""
     image="https://cdn.freecodecamp.org/curriculum/labs/pathway.jpg"
     description="Warm-temperature and sunny morning"
     />
