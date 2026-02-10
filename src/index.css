@@ -1,0 +1,21 @@
+.mood-board {
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.mood-board-item {
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.mood-board-image {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+}
+
+.mood-board-text {
+  margin-top: 0.5rem;
+}
