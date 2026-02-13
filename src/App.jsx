@@ -1,10 +1,10 @@
-import ColorPicker from "./components/colorPicket.jsx";
+import Counter from "./components/useEffect.jsx";
 
 
 function App(){
   return(
     <div>
-      <ColorPicker />
+      <Counter />
     </div>
   )
 }
