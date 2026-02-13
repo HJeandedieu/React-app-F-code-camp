@@ -3,7 +3,7 @@ import { MoodBoard } from "./components/MoodBoard";
 function App(){
   return(
     <div>
-    <MoodBoard />
+    <Counter />
     </div>
   )
 }
