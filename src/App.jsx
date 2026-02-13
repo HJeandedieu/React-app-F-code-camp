@@ -1,9 +1,10 @@
-import { MoodBoard } from "./components/MoodBoard";
+import ColorPicker from "./components/colorPicket.jsx";
+
 
 function App(){
   return(
     <div>
-    <Counter />
+      <ColorPicker />
     </div>
   )
 }
