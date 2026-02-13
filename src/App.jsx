@@ -1,10 +1,10 @@
-import Counter from "./components/useEffect.jsx";
+import FootballerSearch from "./components/FootballerSearch.jsx";
 
 
 function App(){
   return(
     <div>
-      <Counter />
+      <FootballerSearch />
     </div>
   )
 }
