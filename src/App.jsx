@@ -1,10 +1,10 @@
-import FootballerSearch from "./components/FootballerSearch.jsx";
+import EventRSVPForm from "./components/reservationForm.jsx";
 
 
 function App(){
   return(
     <div>
-      <FootballerSearch />
+      <EventRSVPForm />
     </div>
   )
 }

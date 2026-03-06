@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/996ec59bca4182de287d41943aa05cd3?family=Infiniti+Brand+Light);
+
 .mood-board {
   padding: 2rem;
   display: grid;
@@ -18,4 +20,45 @@
 
 .mood-board-text {
   margin-top: 0.5rem;
+}
+
+.formContainer{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  justify-content:center;
+  margin-top:7rem;
+  margin-left:35rem;
+  font-family: "Infiniti Brand Light";
+}
+
+input, label, select, button{
+  font-family:inherit;
+  font-size:inherit;
+  color:inherit;
+}
+
+formContainer > h1{
+  font-size:2rem;
+  font-weight:bold;
+}
+
+label{
+  font-size:1rem;
+}
+
+input:not([type="checkbox"]), button{
+  width:320px;
+  padding:8px;
+  margin:16px 0px;
+  border: .5px solid black;
+  border-radius: 5px;
+}
+
+button[type="submit"]{
+  background-color:rgb(89,87,228);
+  border:none;
+  color:white;
+  font-weight:bold;
+  width:21rem;
 }
