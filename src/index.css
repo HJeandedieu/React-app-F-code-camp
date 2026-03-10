@@ -63,3 +63,15 @@ button[type="submit"]{
   width:21rem;
 }
 
+
+.Shopcontainer{
+  font-family: "Infiniti Brand Light";
+  width: 100vw;
+  margin: 10px auto 10px auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+}
+
+

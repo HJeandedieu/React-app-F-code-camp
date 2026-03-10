@@ -43,10 +43,10 @@ export const ShoppingList = () => {
   }
 
   return (
-    <div className="container">
+    <div className="Shopcontainer">
       <h1>Shopping List</h1>
       <form>
-        <label htmlFor="search">Search for an item:</label>
+        <label htmlFor="search">Search for an item:</label><br />
         <input
           id="search"
           type="search"
