@@ -1,4 +1,4 @@
-const { useState, useMemo, useCallback } = React;
+import { useState, useMemo, useCallback } from "react";
 
 const items = [
   "Apples",
@@ -22,15 +22,18 @@ export const ShoppingList = () => {
   const filteredItems = useMemo(() => {
     console.log("Filtering items...");
     return items.filter((item) =>
-      item.toLowerCase().includes(query.toLowerCase())
+      item.toLowerCase().includes(query.toLowerCase()),
     );
   }, [query]);
 
-  const toggleItem = useCallback((item)=>{
-    setSelectedItems((prev) =>
-      prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]
-    );
-  }, [setSelectedItems])
+  const toggleItem = useCallback(
+    (item) => {
+      setSelectedItems((prev) =>
+        prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item],
+      );
+    },
+    [setSelectedItems],
+  );
 
   if (prevToggleItem !== toggleItem) {
     console.log("New toggleItem function");
@@ -51,7 +54,7 @@ export const ShoppingList = () => {
           aria-describedby="search-description"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-        /> 
+        />
         <p id="search-description">Type to filter the list below:</p>
         <ul>
           {filteredItems.map((item) => {

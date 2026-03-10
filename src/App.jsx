@@ -1,10 +1,10 @@
-import EventRSVPForm from "./components/reservationForm.jsx";
+import {ShoppingList} from "./components/shoppingList.jsx"
 
 
 function App(){
   return(
     <div>
-      <EventRSVPForm />
+      <ShoppingList />
     </div>
   )
 }
