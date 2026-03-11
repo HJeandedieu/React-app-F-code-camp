@@ -1,16 +1,16 @@
 import { useState, useMemo, useCallback } from "react";
 
 const items = [
-  "Apples",
-  "Bananas",
-  "Strawberries",
-  "Blueberries",
-  "Mangoes",
-  "Pineapple",
-  "Lettuce",
-  "Broccoli",
-  "Paper Towels",
-  "Dish Soap",
+  "🍎Apples",
+  "🍌Bananas",
+  "🍓Strawberries",
+  "🫐Blueberries",
+  "🥭Mangoes",
+  "🍍Pineapple",
+  "🥬Lettuce",
+  "🥦Broccoli",
+  "🧻Paper Towels",
+  "🧴Dish Soap",
 ];
 
 let prevToggleItem = null;
@@ -44,7 +44,9 @@ export const ShoppingList = () => {
 
   return (
     <div className="Shopcontainer">
-      <h1>Shopping List</h1>
+      <div class="intro-text">
+        <h1>Shopping List</h1>
+      </div>
       <form>
         <label htmlFor="search">Search for an item:</label><br />
         <input
@@ -76,6 +78,9 @@ export const ShoppingList = () => {
             );
           })}
         </ul>
+
+        <input type="text" name="add" placeholder="Add a new item..." />
+        <button id="addBtn">+</button>
       </form>
     </div>
   );
