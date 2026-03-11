@@ -1,30 +1,40 @@
 import { useState, useMemo, useCallback } from "react";
 
-const items = [
-  "🍎Apples",
-  "🍌Bananas",
-  "🍓Strawberries",
-  "🫐Blueberries",
-  "🥭Mangoes",
-  "🍍Pineapple",
-  "🥬Lettuce",
-  "🥦Broccoli",
-  "🧻Paper Towels",
-  "🧴Dish Soap",
-];
 
 let prevToggleItem = null;
 
 export const ShoppingList = () => {
   const [query, setQuery] = useState("");
   const [selectedItems, setSelectedItems] = useState([]);
+  const [add, setAdd] = useState("");
+  const [items, setItems] = useState([
+    "🍎Apples",
+    "🍌Bananas",
+    "🍓Strawberries",
+    "🫐Blueberries",
+    "🥭Mangoes",
+    "🍍Pineapple",
+    "🥬Lettuce",
+    "🥦Broccoli",
+    "🧻Paper Towels",
+    "🧴Dish Soap",
+  ]);
 
   const filteredItems = useMemo(() => {
     console.log("Filtering items...");
     return items.filter((item) =>
       item.toLowerCase().includes(query.toLowerCase()),
     );
-  }, [query]);
+  }, [query, items]);
+
+
+  // ADD NEW LIST ELEMENT
+  function handleSubmit(e){
+    e.preventDefault();
+    setItems(prev => [...prev, add]);
+    setAdd("");
+  }
+
 
   const toggleItem = useCallback(
     (item) => {
@@ -44,10 +54,10 @@ export const ShoppingList = () => {
 
   return (
     <div className="Shopcontainer">
-      <div class="intro-text">
+      <div className="intro-text">
         <h1>Shopping List</h1>
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="search">Search for an item:</label><br />
         <input
           id="search"
@@ -79,8 +89,17 @@ export const ShoppingList = () => {
           })}
         </ul>
 
-        <input type="text" name="add" placeholder="Add a new item..." />
-        <button id="addBtn">+</button>
+        <input 
+          type="text" 
+          name="add" 
+          value={add}
+          placeholder="Add a new item..."
+          onChange={e=>setAdd(e.target.value)}
+           />
+        <button 
+          id="addBtn"
+          type="submit"
+        >+</button>
       </form>
     </div>
   );
