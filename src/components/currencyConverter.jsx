@@ -1,4 +1,4 @@
-const { useState, useMemo } = React;
+import { useState, useMemo} from 'react';
 
 export function CurrencyConverter() {
   const rates = [
@@ -39,39 +39,54 @@ export function CurrencyConverter() {
   const convertedAmount = convertedAmounts[target];
   
   return (
-    <div>
-      <h1>Currency Converter</h1>
-      <h2>{start} to {target} Conversion</h2>
-      <input
-        type="number"
-        onChange={handleChange}
-        value={value}
-      /><br />
-      <label>Start Currency:</label><br />
-      <select  
-        name="start"  
-        id="start"
-        onChange={handleStart}
-        value={start}
-      >
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
-        <option value="JPY">JPY</option>
-      </select><br />
-      <label>TargetCurrency:</label><br />
-      <select 
-        name="target"
-        id="target"
-        onChange={handleTarget}
-        value={target}
-        >
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
-        <option value="JPY">JPY</option>
-      </select><br />
-      <h2>Converted Amount: {convertedAmount.toFixed(2)} {target}</h2>
+    <div className="converterContainer">
+      <div className="intro-text-converter">
+        <h1>Currency Converter</h1>
+        <p>{start} to {target} Conversion</p>
+      </div>
+      <div className="development">
+        <label>Amount</label><br />
+        <input
+          type="number"
+          onChange={handleChange}
+          value={value}
+          style={{ backgroundColor: 'rgb(14,14,14)', color: 'white' }}
+        /><br />
+        <div className="selection">
+          <div className="selectionOne">
+            <label>From</label><br />
+            <select  
+              name="start"  
+              id="start"
+              onChange={handleStart}
+              value={start}
+            >
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="JPY">JPY</option>
+            </select>
+          </div>
+          <div className="selectionTwo">
+            <label>To</label><br />
+            <select 
+              name="target"
+              id="target"
+              onChange={handleTarget}
+              value={target}
+              >
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="JPY">JPY</option>
+            </select><br />
+          </div>
+        </div>
+        <div className="converterResults">
+          <p id="para">Converted Amount:</p>
+          <p id="amount">{convertedAmount.toFixed(2)} {target}</p>
+        </div>
+      </div>
     </div>
   )
 }

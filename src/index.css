@@ -1,4 +1,5 @@
 @import url(https://db.onlinewebfonts.com/c/996ec59bca4182de287d41943aa05cd3?family=Infiniti+Brand+Light);
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Syne:wght@400..800&display=swap');
 
 .mood-board {
   padding: 2rem;
@@ -32,11 +33,11 @@
   font-family: "Infiniti Brand Light";
 }
 
-input, label, select, button{
+/* input, label, select, button{
   font-family:inherit;
   font-size:inherit;
   color:inherit;
-}
+} */
 
 formContainer > h1{
   font-size:2rem;
@@ -64,14 +65,14 @@ button[type="submit"]{
 }
 
 body{
-  background-color:rgb(245,240,232);
+  background-color:rgb(14,14,14);
   display:flex;
   justify-content: center;
   align-items:center;
+  font-family: "Infiniti Brand Light";
 }
 
 .Shopcontainer{
-  font-family: "Infiniti Brand Light";
   width:fit-content;
   background-color:white;
   border-radius: 20px;
@@ -113,3 +114,71 @@ input[name="add"]{
 input[name="add"]::placeholder{
   color:rgb(197,189,176);
 }
+
+.converterContainer{
+  font-family:syne;
+  width:fit-content;
+  margin: 4.5rem auto;
+  background-color:rgb(22,22,22);
+  color:rgb(102,102,102);
+}
+
+.converterContainer h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: white;
+}
+
+.intro-text-converter{
+  border-bottom: 1px solid rgb(63, 63, 63);
+  padding:2rem 2rem;
+}
+.development{
+  padding: 2rem 2rem;
+}
+.converterResults{
+  background-color:rgb(14,14,14);
+  border-left:2px solid rgb(200,241,53);
+  margin-top:1.5rem;
+  padding:1rem;
+  border-radius:5px;
+  outline: 1px solid rgb(42,42,42)
+}
+
+.converterResults #para{
+  font-family: "DM mono";
+  font-size:0.75rem;
+}
+
+.converterResults #amount{
+  color:rgb(200,241,53);
+  font-size:2rem;
+  font-weight:800
+}
+
+.converterContainer input[type="number"]{
+  background-color:rgb(14,14,14) !important;
+  color:white !important;
+  font-size:1.5rem;
+  border:1px solid rgb(42,42,42) !important;
+  border-radius: 5px;
+  width:22rem;
+  padding:8px;
+  margin:16px 0px;
+}
+
+.converterContainer select{
+  background-color:rgb(3, 3, 3);
+  padding:10px 0px;
+  color: white;
+  border: 1px solid rgb(42,42,42);
+  width:11rem;
+}
+
+.converterContainer .selection{
+  display:flex;
+  gap: 1rem;
+}
+

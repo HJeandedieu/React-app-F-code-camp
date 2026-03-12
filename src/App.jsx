@@ -1,10 +1,10 @@
-import {ShoppingList} from "./components/shoppingList.jsx"
+import {CurrencyConverter} from "./components/currencyConverter.jsx"
 
 
 function App(){
   return(
     <div>
-      <ShoppingList />
+      <CurrencyConverter />
     </div>
   )
 }
