@@ -1,4 +1,4 @@
-const { useState } = React;
+import {useState} from "react"
 
 export function Board() {
   const [cells, setCells] = useState(Array(9).fill(""));
@@ -54,11 +54,11 @@ export function Board() {
       : `Next Player: ${xIsNext ? "X" : "O"}`;
 
   return (
-    <div>
+    <div className="tic-tac-toeContainer">
       <h2>Tic-Tac-Toe</h2>
       <p>{statusMessage}</p>
       <div 
-        className="container"
+        className="ticContainer"
         style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "5px" }}
       >
         {cells.map((val, i) => (
