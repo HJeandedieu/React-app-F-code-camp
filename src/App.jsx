@@ -1,10 +1,10 @@
-import {CurrencyConverter} from "./components/currencyConverter.jsx"
+import {Board} from "./components/tic-tac-toe.jsx"
 
 
 function App(){
   return(
     <div>
-      <CurrencyConverter />
+      <Board />
     </div>
   )
 }
